@@ -62,7 +62,7 @@ export const MODELS = {
       value: "iphone15",
     },
   ],
-};
+} as const;
 
 export const MATERIALS = {
   name: "material",
