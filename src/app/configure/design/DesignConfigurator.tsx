@@ -51,8 +51,9 @@ const DesignConfigurator = ({
     },
     onError: () => {
       toast({
-        title: "Something went wrong",
-        description: "There was an error on our end. Please try again.",
+        title: "Algo salió mal",
+        description:
+          "Hubo un problema de nuestro lado, por favor inténtalo de nuevo.",
         variant: "destructive",
       });
     },
@@ -133,9 +134,9 @@ const DesignConfigurator = ({
       await startUpload([file], { configId });
     } catch (err) {
       toast({
-        title: "Something went wrong",
+        title: "Algo salió mal",
         description:
-          "There was a problem saving your config, please try again.",
+          "Hubo un problema al guardar tu configuración, por favor inténtalo de nuevo.",
         variant: "destructive",
       });
     }
@@ -395,7 +396,7 @@ const DesignConfigurator = ({
               <Button
                 isLoading={isPending}
                 disabled={isPending}
-                loadingText="Saving"
+                loadingText="Cargando"
                 onClick={() =>
                   saveConfig({
                     configId,
